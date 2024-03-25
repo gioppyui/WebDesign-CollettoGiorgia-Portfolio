@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0%;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Nunito", sans-serif, Verdana, Geneva, Tahoma, sans-serif;
 }
 header
 {
@@ -16,15 +16,9 @@ header
     align-items: center;
     padding: 15px 100px;
     z-index: 10;
-    background-color: rgba(0, 0, 0, 0.912);
-}
-header .Logo
-{
-    position: relative;
-    font-size: 1.5em;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+    background-color: rgba(4, 169, 150, 0.962);
+    box-shadow: 0 10 5px rgba(0, 0, 0, 0.1);
+    
 }
 header .navigation
 {
@@ -40,42 +34,18 @@ header .navigation li
 }
 header .navigation li a
 {
-    color: white;
+    color: rgb(240, 243, 191);
     text-decoration: none;
     font-weight: 500;
     letter-spacing: 1px;
 }
 header .navigation li a:hover
 {
-    color: whitesmoke;
-}
-header .search
-{
-    position: relative;
-    width: 300px;
-    height: 40px;
-}
-header .search input
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: white;
-    background: transparent;
-    outline: none;
-    border: 1px solid white;
-    border-radius: 10px;
-    padding: 0 10px 0 45px;
-}
-header .search input::placeholder
-{
-    color: whitesmoke;
+    color: rgb(9, 128, 145);
 }
 .banner
 {
-    background: whitesmoke;
+    background: rgb(240, 243, 191);
     padding: 200px 100px 100px;
     min-height: 100vh;
     display: flex;
@@ -89,15 +59,71 @@ header .search input::placeholder
 .banner .content h2
 {
     font-size: 3em;
-    color: black;
+    color: #04A996;
 }
 .banner .content p
 {
     font-size: 1.2em;
-    color: black
+    color: #31B997;
 }
 .banner .images
 {
     max-width: 400px;
     margin-left: 30px;
+}
+.progetti
+{
+    background: rgba(4, 169, 150, 0.962);
+    padding: 200px 100px 100px;
+    min-height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+}
+.progetti .content
+{
+    max-width: 700px;
+}
+.progetti h2
+{
+    font-size: 3em;
+    color: rgb(240, 243, 191);
+}
+.progetti p
+{
+    font-size: 1.2em;
+    color: rgb(240, 243, 191);
+}
+.contatti
+{
+    background: rgb(240, 243, 191);
+    padding: 200px 100px 100px;
+    min-height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+}
+.contatti .content
+{
+    max-width: 700px;
+}
+.contatti h2
+{
+    font-size: 3em;
+    color:  #04A996;
+}
+.contatti p
+{
+    font-size: 1.2em;
+    color: #31B997;
+}
+.social-icons
+{
+    text-align: left;
+    margin-top: 20px;
+}
+.nunito-uniquifier
+{
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
