@@ -2,4 +2,4 @@
 
 Progetto di Giorgia Colletto - Portfolio personale
 
-https://stupendous-sunflower-c088ba.netlify.app/
+(https://giopgraphicsportfolio.netlify.app/)
