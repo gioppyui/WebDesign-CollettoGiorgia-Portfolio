@@ -6,7 +6,7 @@
 }
 body
 {
-    font-family: "Nunito", sans-serif, Verdana, Tahoma, sans-serif;
+    font-family: "balto", sans-serif, Verdana, Tahoma, sans-serif;
 }
 header {
     position: absolute;
@@ -142,10 +142,35 @@ header #navigation li a
     text-align: left;
     margin-top: 20px;
 }
-.nunito-uniquifier
+.balto
 {
-  font-family: "Nunito", sans-serif;
+  font-family: "Balto", sans-serif;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
+}
+.carousel 
+{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0;
+}
+.carousel-inner 
+{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+.carousel-item img 
+{
+    width: 700px; 
+    height: 500px; 
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
