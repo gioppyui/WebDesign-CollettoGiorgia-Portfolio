@@ -19,4 +19,20 @@ document.addEventListener("DOMContentLoaded", function() {
         const contattiSection = document.getElementById("contatti");
         contattiSection.scrollIntoView({ behavior: "smooth" });
     });
+
+
+    const carouselInner = document.querySelector('.carousel-inner');
+    const items = document.querySelectorAll('.carousel-item');
+    let currentIndex = 0;
+
+    const moveCarousel = () => {
+        currentIndex++;
+        if (currentIndex >= items.length) {
+            currentIndex = 0;
+        }
+        const offset = -currentIndex * 100;
+        carouselInner.style.transform = `translateX(${offset}%)`;
+    };
+
+    setInterval(moveCarousel, 3000);
 });
