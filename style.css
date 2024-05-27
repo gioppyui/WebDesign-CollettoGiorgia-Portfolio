@@ -54,18 +54,25 @@ header #navigation li a
     text-decoration: none;
     padding: 2px;
 }
+@keyframes gradient1 {
+    0% {
+        background: linear-gradient(-45deg, #f0f3bf, #e5d0a8);
+    }
+    25% {
+        background: linear-gradient(-45deg, #e5d0a8, #f0f3bf);
+    }
+    40% {
+        background: linear-gradient(-45deg, #e5d0a8, #f0f3bf);
+    }
+    100% {
+        background: linear-gradient(-45deg, #f0f3bf, #e5d0a8);
+    }
+}
 .banner 
 {
-    background: rgb(240, 243, 191);
-    padding: 200px 100px 100px;
-    min-height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.banner
-{
-    background: rgb(240, 243, 191);
+    background: linear-gradient(-45deg, #f0f3bf, #e5d0a8);
+    background-size: 400% 400%;
+    animation: gradient1 15s ease infinite;
     padding: 200px 100px 100px;
     min-height: 100vh;
     display: flex;
@@ -91,9 +98,63 @@ header #navigation li a
     max-width: 400px;
     margin-left: 30px;
 }
+@keyframes gradient2 {
+    0% {
+        background: linear-gradient(-45deg, #f0f3bf, #e5d0a8);
+    }
+    25% {
+        background: linear-gradient(-45deg, #e5d0a8, #f0f3bf);
+    }
+    40% {
+        background: linear-gradient(-45deg, #e5d0a8, #f0f3bf);
+    }
+    100% {
+        background: linear-gradient(-45deg, #f0f3bf, #e5d0a8);
+    }
+}
+.contatti
+{
+    background: linear-gradient(-45deg, #f0f3bf, #e5d0a8);
+    background-size: 400% 400%;
+    animation: gradient2 15s ease infinite;
+    padding: 200px 100px 100px;
+    min-height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+}
+.contatti .content
+{
+    max-width: 700px;
+}
+.contatti h2
+{
+    font-size: 3em;
+    color:  #04A996;
+}
+.contatti p
+{
+    font-size: 1.2em;
+    color: #31B997;
+}
+@keyframes gradient3 {
+    0% {
+        background: linear-gradient(-45deg, #04a996, #31b997,#098091);
+    }
+    25% {
+        background: linear-gradient(-45deg, #04a996, #31b997,#098091);
+    }
+    40% {
+        background: linear-gradient(-45deg, #04a996, #31b997,#098091);
+    }
+    100% {
+        background: linear-gradient(-45deg, #04a996, #31b997,#098091);
+    }
+}
 .progetti
 {
-    background: rgba(4, 169, 150, 0.962);
+    background: linear-gradient(-45deg, #04a996, #31b997,#098091);
+    background-size: 400% 400%;
+    animation: gradient3 15s ease infinite;
     padding: 200px 100px 100px;
     min-height: 100vh;
     justify-content: space-between;
@@ -114,28 +175,6 @@ header #navigation li a
 {
     font-size: 1.2em;
     color: rgb(240, 243, 191);
-}
-.contatti
-{
-    background: rgb(240, 243, 191);
-    padding: 200px 100px 100px;
-    min-height: 100vh;
-    justify-content: space-between;
-    align-items: center;
-}
-.contatti .content
-{
-    max-width: 700px;
-}
-.contatti h2
-{
-    font-size: 3em;
-    color:  #04A996;
-}
-.contatti p
-{
-    font-size: 1.2em;
-    color: #31B997;
 }
 .social-icons
 {
@@ -173,4 +212,14 @@ header #navigation li a
     display: block;
     margin: 0 auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.footer 
+{
+    background-color:  rgba(4, 169, 150, 0.962);
+    color:  rgb(240, 243, 191);
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 -3px 4px rgba(0, 0, 0, 0.2);
 }
