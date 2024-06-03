@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+
     const biografiaLink = document.querySelector('a[href="#biografia"]');
     biografiaLink.addEventListener("click", function(event) {
         event.preventDefault();
@@ -20,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function() {
         contattiSection.scrollIntoView({ behavior: "smooth" });
     });
 
-
     const carouselInner = document.querySelector('.carousel-inner');
     const items = document.querySelectorAll('.carousel-item');
     let currentIndex = 0;
@@ -35,4 +35,11 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     setInterval(moveCarousel, 3000);
+
+    const menuIcon = document.getElementById('menu-icon');
+    const navigation = document.getElementById('navigation');
+
+    menuIcon.addEventListener('click', function() {
+        navigation.classList.toggle('menu-open');
+    });
 });
