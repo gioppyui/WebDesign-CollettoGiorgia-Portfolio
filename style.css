@@ -22,33 +22,6 @@ header
     background-color: rgba(4, 169, 150, 0.962);
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }
-.menu-icon 
-{
-    display: none;
-    font-size: 1.5rem;
-    color: rgb(240, 243, 191);
-    cursor: pointer;
-}
-#menu-icon
-{
-    position: absolute;
-    top: 15px; 
-    right: 15px; 
-    z-index: 20; 
-}
-@media (max-width: 768px) {
-    #navigation, #icone-header {
-        display: none;
-    }
-
-    .menu-icon {
-        display: block;
-    }
-
-    .menu-open #navigation, .menu-open #icone-header {
-        display: flex;
-    }
-}
 header #navigation 
 {
     display: flex;
@@ -93,6 +66,35 @@ header #navigation li a
     text-decoration: none;
     padding: 2px;
 }
+@media (max-width: 768px) {
+    header {
+        padding: 15px 10px; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    header #navigation {
+        margin-top: 10px; 
+    }
+
+    header #navigation li {
+        margin: 10px 0; 
+    }
+
+    .button {
+        padding: 7px 8px; 
+        font-size: 0.9rem; 
+    }
+
+    #icone-header {
+        margin-top: 10px; 
+    }
+
+    #icone-header a {
+        display: inline-block; 
+        margin: 0 5px; 
+    }
+}
 @keyframes gradient1 {
     0% {
         background: linear-gradient(-45deg, #f0f3bf, #e5d0a8);
@@ -107,35 +109,27 @@ header #navigation li a
         background: linear-gradient(-45deg, #f0f3bf, #e5d0a8);
     }
 }
-.banner 
-{
+.banner {
     background: linear-gradient(-45deg, #f0f3bf, #e5d0a8);
     background-size: 400% 400%;
     animation: gradient1 15s ease infinite;
     padding: 10% 5%;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
-    text-align: center;
-}
-.banner .content h2 
-{
-    font-size: 2.5rem;
-    color: #04A996;
 }
 
-.banner .content p 
-{
-    font-size: 1.2rem;
-    color: #31B997;
+.banner .content {
+    max-width: calc(50% - 20px);
+    font-size: 20px;
+    color:#04A996;
+    text-align: left; 
 }
 
-.banner .images 
-{
-    max-width: 400px;
-    height: 300px;
+.banner .images {
+    max-width: calc(40% - 20px);
+    height: auto;
 }
 @keyframes gradient2 {
     0% {
@@ -171,11 +165,48 @@ header #navigation li a
     font-size: 3em;
     color:  #04A996;
 }
-.contatti p
+#testo-contatti
 {
+    margin-top: 15px;
     font-size: 1.2em;
-    color: #31B997;
+    font-weight: 550;
+    color:  #04A996;
 }
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #007f6d;
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    resize: vertical;
+}
+input[type=submit] 
+{
+    background-color: #f0f3bf;
+    color: #007f6d;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+input[type=submit]:hover 
+{
+    background-color: #e5d0a8;
+}
+.container 
+{
+    border-radius: 5px;
+    background-color: #04A996;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+  .container label {
+    font-weight: 550;
+    color: #f0f3bf;
+  }
 @keyframes gradient3 {
     0% {
         background: linear-gradient(-45deg, #04a996, #31b997,#098091);
@@ -246,9 +277,10 @@ header #navigation li a
 }
 .carousel-item img 
 {
-    width: 700px; 
-    height: 500px; 
-    object-fit: cover;
+    width: 100%; 
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; 
     display: block;
     margin: 0 auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
