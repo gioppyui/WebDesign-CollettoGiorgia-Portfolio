@@ -15,9 +15,6 @@
 </head>
 <body>
   <header>
-    <div id="menu-icon" class="menu-icon">
-      <i class="fa-solid fa-bars" style="color: #f0f3bf;"></i>
-    </div>
   <ul class="col-lg-5" id="navigation">
       <li><a href="#biografia" class="button">Chi sono?</a></li>
       <li><a href="#progetti" class="button">Progetti</a></li>
@@ -57,13 +54,30 @@
       </div>
     </div>
     <div id="contatti" class="contatti">
-      <h2><strong>Contatti</strong></h2>
-      <p>
-        Per domande, collaborazioni o semplice interesse sul mio lavoro, contattami via email a <strong>giopgraphics@gmail.com</strong> oppure clicca una delle icone sottostanti. Sarò lieta di risponderti al più presto possibile.
-      </p>
-      <p>
-        Grazie!
-      </p>
+      <h2><strong>Contattami</strong></h2>
+      <div class="container">
+        <form action="action_page.php">
+      
+          <label for="fname">NOME</label>
+          <input type="text" id="fname" name="firstname" placeholder="Il tuo nome...">
+      
+          <label for="lname">COGNOME</label>
+          <input type="text" id="lname" name="lastname" placeholder="Il tuo cognome...">
+
+          <label for="email">EMAIL</label>
+          <input type="text" id="email" name="email" placeholder="La tua email">
+      
+          </select>
+      
+          <label for="richiesta">LA TUA RICHIESTA</label>
+          <textarea id="richiesta" name="richiesta" placeholder="Scrivi qui cosa cerchi!" style="height:200px"></textarea>
+      
+          <input type="submit" value="INVIA">
+        </form>
+      </div>
+      <div id="testo-contatti">
+      <p>Altrimenti mi puoi trovare anche qui:</p>
+      </div>
       <div class="social-icons">
         <a href="https://www.instagram.com/giopgraphics/?next=%2F"><i class="fab fa-instagram-square fa-2x fa-bounce" style="color: #04A996;"></i></a>
         <a href="https://www.linkedin.com/in/giorgia-colletto-600379250/"><a href="https://www.linkedin.com/in/giorgia-colletto-600379250/"><i class="fab fa-linkedin fa-2x fa-bounce" style="color: #04a996;"></i></a>
@@ -80,3 +94,4 @@
   </footer>
   </body>
 </html>
+
