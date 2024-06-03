@@ -29,6 +29,13 @@ header
     color: rgb(240, 243, 191);
     cursor: pointer;
 }
+#menu-icon
+{
+    position: absolute;
+    top: 15px; 
+    right: 15px; 
+    z-index: 20; 
+}
 @media (max-width: 768px) {
     #navigation, #icone-header {
         display: none;
