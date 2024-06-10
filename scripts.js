@@ -34,6 +34,19 @@ document.addEventListener("DOMContentLoaded", function() {
         carouselInner.style.transform = `translateX(${offset}%)`;
     };
 
-    setInterval(moveCarousel, 3000);
-});
 
+    if (window.innerWidth > 768) {
+        setInterval(moveCarousel, 3000);
+    }
+
+
+    window.addEventListener('resize', function() {
+        if (window.innerWidth <= 768) {
+
+            carouselInner.style.transform = `translateX(0)`;
+        } else {
+
+            setInterval(moveCarousel, 3000);
+        }
+    });
+});
