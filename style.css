@@ -4,117 +4,90 @@
     box-sizing: border-box;
 }
 body {
+    min-height: 100vh;
     font-family: "balto", sans-serif, Verdana, Tahoma, sans-serif;
 }
-header {
-    position: absolute;
+nav {
+    height: 60px;
+    background-color: hsl(171, 100%, 25%);
+    box-shadow: 0px 3px 4px hsla(0, 0%, 0%, 0.2);
+    position: relative;
+    z-index: 1000;
+}
+nav ul {
+    height: 60px;
     width: 100%;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 5%;
-    z-index: 10;
-    background-color: rgba(4, 169, 150, 0.962);
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-}
-header #navigation {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 10px 0;
-}
-header #navigation li {
     list-style: none;
-    margin: 0 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: "balto";
+}
+nav li {
+    height: 50px;
+}
+nav #logo-sidebar img {
+    height: 100%;
+    width: auto;
+    padding: 0 20px;
+    max-height: 60px; 
+}
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
     display: flex;
     align-items: center;
+    color: #f0f3bf;
+    font-size: 20px;
+    line-height: 60px;
+    font-weight: 550;
 }
-header #navigation li a {
-    color: rgb(240, 243, 191);
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 500;
-    letter-spacing: 1px;
-}
-.button {
-    display: inline-block;
-    padding: 7px 10px;
-    background-color: #007f6d;
-    color: rgb(240, 243, 191);
-    text-decoration: none;
+nav a:hover {
+    background-color: #04A996;
     border-radius: 20px;
-    transition: background-color 0.3s ease;
-    font-size: 1rem;
 }
-.button:hover {
-    background-color: rgba(4, 169, 150, 0.8);
+nav li:first-child{
+    margin-right: auto;
 }
-#icone-header {
-    float: right;
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: hsla(171, 100%, 25%, 0.51);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
-#icone-header a {
-    color: rgb(240, 243, 191);
-    text-decoration: none;
-    padding: 2px;
+.sidebar li{
+    width: 100%;
 }
-@media (max-width: 768px) {
-    header {
-        padding: 15px 10px; 
-        flex-direction: column; 
-        align-items: center; 
+.sidebar a{
+    width: 100%;
+}
+.menu-button{
+    display: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+@media(max-width:800px){
+    .hideOnMobile{
+        display: none;
     }
-
-    header #navigation {
-        margin-top: 10px; 
+    .menu-button{
+        display: block;
     }
-
-    header #navigation li {
-        margin: 10px 0; 
-    }
-
-    .button {
-        padding: 7px 8px; 
-        font-size: 0.9rem; 
-    }
-
-    #icone-header {
-        margin-top: 10px; 
-    }
-
-    #icone-header a {
-        display: inline-block; 
-        margin: 0 5px; 
-    }
-
-    .banner {
-        padding: 20% 5%;
-    }
-
-    .banner .content h2 {
-        font-size: 2rem;
-    }
-
-    .banner .content p {
-        font-size: 1rem;
-    }
-
-    .carousel-inner {
-        flex-direction: column;
-    }
-
-    .carousel-item {
-        min-width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .carousel-item img {
+}
+@media(max-width:400px){
+    .sidebar{
         width: 100%;
-        height: auto;
-    }
-
-    .footer {
-        padding: 10px 0;
     }
 }
 @keyframes gradient1 {
@@ -141,16 +114,14 @@ header #navigation li a {
     justify-content: center; 
     align-items: center;
 }
-
 .banner .content {
-    max-width: calc(50% - 20px);
+    max-width: 100%;
     font-size: 20px;
     color:#04A996;
     text-align: left; 
 }
-
 .banner .images {
-    max-width: calc(40% - 20px);
+    max-width: calc(30% - 20px);
     height: auto;
 }
 @keyframes gradient2 {
@@ -256,7 +227,7 @@ input[type=submit]:hover {
 }
 .progetti p {
     font-size: 1.2em;
-    color: rgb(240, 243, 191);
+    color: #f0f3bf;
 }
 .social-icons {
     text-align: left;
@@ -268,28 +239,60 @@ input[type=submit]:hover {
   font-weight: weight;
   font-style: normal;
 }
-.carousel {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    margin: 20px 0;
-}
-.carousel-inner {
+.progetti {
+    background: linear-gradient(-45deg, #04a996, #31b997,#098091);
+    background-size: 400% 400%;
+    animation: gradient3 15s ease infinite;
+    padding: 100px 20px;
+    min-height: 100vh;
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; 
 }
-.carousel-item {
-    min-width: 100%;
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
     box-sizing: border-box;
 }
-.carousel-item img {
-    width: 100%; 
-    max-width: 100%;
+.portfolio-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+.portfolio-item img {
+    width: 100%;
     height: auto;
-    object-fit: cover; 
-    display: block;
-    margin: 0 auto;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.portfolio-item video {
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.portfolio-item video:hover {
+    transform: scale(1.05);
+}
+.portfolio-item img:hover {
+    transform: scale(1.05);
+}
+.portfolio-item p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: 510;
+    color: #f0f3bf;
 }
 .footer {
     background-color:  rgba(4, 169, 150, 0.962);
@@ -298,5 +301,5 @@ input[type=submit]:hover {
     padding: 20px 0;
     position: relative;
     width: 100%;
-    box-shadow: 0 -3px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -3px 3px hsla(0, 0%, 0%, 0.2);
 }
