@@ -1,5 +1,18 @@
-document.addEventListener("DOMContentLoaded", function() {
+function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+}
 
+function hideSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+}
+document.addEventListener("DOMContentLoaded", function() {
+    if (window.innerWidth <= 800) {
+        document.documentElement.style.scrollBehavior = "auto";
+    }
+});    
+document.addEventListener("DOMContentLoaded", function() {
     const biografiaLink = document.querySelector('a[href="#biografia"]');
     biografiaLink.addEventListener("click", function(event) {
         event.preventDefault();
@@ -20,33 +33,5 @@ document.addEventListener("DOMContentLoaded", function() {
         const contattiSection = document.getElementById("contatti");
         contattiSection.scrollIntoView({ behavior: "smooth" });
     });
-
-    const carouselInner = document.querySelector('.carousel-inner');
-    const items = document.querySelectorAll('.carousel-item');
-    let currentIndex = 0;
-
-    const moveCarousel = () => {
-        currentIndex++;
-        if (currentIndex >= items.length) {
-            currentIndex = 0;
-        }
-        const offset = -currentIndex * 100;
-        carouselInner.style.transform = `translateX(${offset}%)`;
-    };
-
-
-    if (window.innerWidth > 768) {
-        setInterval(moveCarousel, 3000);
-    }
-
-
-    window.addEventListener('resize', function() {
-        if (window.innerWidth <= 768) {
-
-            carouselInner.style.transform = `translateX(0)`;
-        } else {
-
-            setInterval(moveCarousel, 3000);
-        }
-    });
+    
 });
