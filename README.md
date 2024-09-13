@@ -14,7 +14,7 @@ https://giopgraphicsportfolio.netlify.app/
 
 ## Progetto 1
 
-Logo personale
+Poster Design
 
 ## Progetto 2
 
@@ -22,7 +22,11 @@ Pinguino in Blender 3d
 
 ## Progetto 3
 
-Scatola passata di pomodoro
+Aergia, Birra
+
+## Progetto 4,5,6
+
+Video realizzati in AE
 
 # Contatti
 
